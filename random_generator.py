@@ -25,19 +25,39 @@ def food_generator(restaurants):
         if(decision == 'no'):
             print(new_food)
         elif(decision == 'yes'):
-            print(f'We are going to {new_food}')
+            print(f'We are going to be dining at {new_food}')
             return new_food
 
     else:
         print('Please enter yes or no.')
-    print(new_food)
 
 
 def trans_generator(transportations):
     new_trans = random.choice(transportations)
-    print(new_trans)
+    for new_trans in transportations:
+        print(new_trans)
+        decision = (
+            input('Is this mode of transportation accceptable?: '))
+        if(decision == 'no'):
+            print(new_trans)
+        elif(decision == 'yes'):
+            print(f'We will be taking a {new_trans}')
+            return new_trans
+
+    else:
+        print('Please enter yes or no.')
 
 
 def enertain_generator(entertainment):
     new_entertain = random.choice(entertainment)
-    print(new_entertain)
+    for new_entertain in entertainment:
+        print(new_entertain)
+        decision = (
+            input('We have planned this for after dinner, does this sound like fun?: '))
+        if(decision == 'no'):
+            print(new_entertain)
+        elif(decision == 'yes'):
+            print(f'We are going to a {new_entertain}')
+            return new_entertain
+    else:
+        print('Please enter yes or no.')
