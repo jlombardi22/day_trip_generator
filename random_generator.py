@@ -3,8 +3,8 @@ import random
 
 def trip_generator(list, decision):
     item = random.choice(list)
+    print(item)
     for item in list:
-        print(item)
         decision = (
             input()
         )
