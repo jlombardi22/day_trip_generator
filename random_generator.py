@@ -2,9 +2,10 @@ import random
 
 
 def trip_generator(list, decision):
-    item = random.choice(list)
-    print(item)
     for item in list:
+        item = random.choice(list)
+
+        print(item)
         decision = (
             input()
         )
@@ -12,7 +13,7 @@ def trip_generator(list, decision):
             print('sorry that didnt work how about this instead?')
         elif(decision == 'yes'):
             print(f'We are going to {item}')
-            return item
+            break
         else:
             print('Please enter yes or no.')
 
